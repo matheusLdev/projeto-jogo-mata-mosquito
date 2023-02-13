@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+	<head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="src/game.js"></script>
+        <title>Mata Mosquito</title>
+    </head>
+	<body onresize="adjustGameStageSize()">
+		<div class="painel">
+			<div class="vidas">
+				<img id="v1" src="imagens/coracao_cheio.png" />
+				<img id="v2" src="imagens/coracao_cheio.png" />
+				<img id="v3" src="imagens/coracao_cheio.png" />
+			</div>
+			<div class="cronometro">Tempo restante: <span id="timer"></span></div>
+		</div>
+		<script src="src/create-mosquito.js"></script>
+	</body>
+</html>
