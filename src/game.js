@@ -30,7 +30,7 @@ var stopwatch = setInterval(function() {
 	if(timer < 0) {
 		clearInterval(stopwatch);
 		clearInterval(createMosquito);
-		window.location.href = 'win.html';
+		window.location.href = '../win.html';
 	} else {
 		document.getElementById('timer').innerHTML = timer;
 	}
@@ -41,9 +41,9 @@ function randomPosition() {
 	if(document.getElementById('mosquito')) {
 		document.getElementById('mosquito').remove();
 		if(lifes > 3) {
-			window.location.href = 'end-game.html';
+			window.location.href = '../end-game.html';
 		} else {
-			document.getElementById('v' + lifes).src = "imagens/coracao_vazio.png";
+			document.getElementById('v' + lifes).src = "../img/coracao_vazio.png";
 			lifes++;
 		}
 	}
@@ -54,7 +54,7 @@ function randomPosition() {
 
 	//criar o elemento html
 	var mosquito = document.createElement('img');
-	mosquito.src = 'imagens/mosquito.png';
+	mosquito.src = '../img/mosquito.png';
 	mosquito.className = randomSize() + ' ' + randomSide();
 	mosquito.style.left = positionX + 'px';
 	mosquito.style.top = positionY + 'px';
@@ -67,16 +67,14 @@ function randomPosition() {
 }
 
 function randomSize() {
-	var classe = Math.floor(Math.random() * 3)
+	var classe = Math.floor(Math.random() * 3);
 	switch(classe) {
 		case 0:
-			return 'mosquito1'
-		
+			return 'mosquito1';
 		case 1:
-			return 'mosquito2'
-
+			return 'mosquito2';
 		case 2:
-			return 'mosquito3'
+			return 'mosquito3';
 	}
 }
 
@@ -84,10 +82,8 @@ function randomSide() {
 	var classe = Math.floor(Math.random() * 2)
 	switch(classe) {
 		case 0:
-			return 'ladoA'
-		
+			return 'ladoA';
 		case 1:
-			return 'ladoB'
-
+			return 'ladoB';
 	}
 }
