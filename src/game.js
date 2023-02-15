@@ -27,10 +27,11 @@ adjustGameStageSize();
 
 var stopwatch = setInterval(function() {
 	timer -= 1;
+	console.log(timer)
 	if(timer < 0) {
 		clearInterval(stopwatch);
 		clearInterval(createMosquito);
-		window.location.href = '../win.html';
+		window.location.href = "win.html";
 	} else {
 		document.getElementById('timer').innerHTML = timer;
 	}
@@ -41,9 +42,9 @@ function randomPosition() {
 	if(document.getElementById('mosquito')) {
 		document.getElementById('mosquito').remove();
 		if(lifes > 3) {
-			window.location.href = '../end-game.html';
+			window.location.href = "end-game.html";
 		} else {
-			document.getElementById('v' + lifes).src = "../img/coracao_vazio.png";
+			document.getElementById('v' + lifes).src = "img/coracao_vazio.png";
 			lifes++;
 		}
 	}
@@ -54,7 +55,7 @@ function randomPosition() {
 
 	//criar o elemento html
 	var mosquito = document.createElement('img');
-	mosquito.src = '../img/mosquito.png';
+	mosquito.src = "img/mosquito.png";
 	mosquito.className = randomSize() + ' ' + randomSide();
 	mosquito.style.left = positionX + 'px';
 	mosquito.style.top = positionY + 'px';
