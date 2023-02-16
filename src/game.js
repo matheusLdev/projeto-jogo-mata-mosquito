@@ -27,7 +27,6 @@ adjustGameStageSize();
 
 var stopwatch = setInterval(function() {
 	timer -= 1;
-	console.log(timer)
 	if(timer < 0) {
 		clearInterval(stopwatch);
 		clearInterval(createMosquito);
