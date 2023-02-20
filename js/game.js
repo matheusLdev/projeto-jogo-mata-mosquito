@@ -52,7 +52,7 @@ function randomPosition() {
 	positionX = positionX < 0 ? 0 : positionX;
 	positionY = positionY < 0 ? 0 : positionY;
 
-	//criar o elemento html
+	//criar o elemento html - Mosquito
 	var mosquito = document.createElement('img');
 	mosquito.src = "img/mosquito.png";
 	mosquito.className = randomSize() + ' ' + randomSide();
@@ -66,6 +66,7 @@ function randomPosition() {
 	document.body.appendChild(mosquito);
 }
 
+//Tamanho aleatório do mosquito.
 function randomSize() {
 	var classe = Math.floor(Math.random() * 3);
 	switch(classe) {
@@ -78,6 +79,7 @@ function randomSize() {
 	}
 }
 
+//Local aleatório onde o mosquito vai aparecer.
 function randomSide() {
 	var classe = Math.floor(Math.random() * 2)
 	switch(classe) {
