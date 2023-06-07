@@ -1,11 +1,11 @@
-var height = 0;
-var width = 0;
-var lifes = 1;
-var timer = 15;
+let height = 0;
+let width = 0;
+let lifes = 1;
+let timer = 15;
 
-var createMosquitoTimer = 1500;
+let createMosquitoTimer = 1500;
 
-var level = window.location.search;
+let level = window.location.search;
 level = level.replace('?', '');
 
 if(level === 'normal') {
@@ -47,13 +47,13 @@ function randomPosition() {
 			lifes++;
 		}
 	}
-	var positionX = Math.floor(Math.random() * width) - 90;
-	var positionY = Math.floor(Math.random() * height) - 90;
+	let positionX = Math.floor(Math.random() * width) - 90;
+	let positionY = Math.floor(Math.random() * height) - 90;
 	positionX = positionX < 0 ? 0 : positionX;
 	positionY = positionY < 0 ? 0 : positionY;
 
 	//criar o elemento html - Mosquito
-	var mosquito = document.createElement('img');
+	let mosquito = document.createElement('img');
 	mosquito.src = "img/mosquito.png";
 	mosquito.className = randomSize() + ' ' + randomSide();
 	mosquito.style.left = positionX + 'px';
@@ -68,7 +68,7 @@ function randomPosition() {
 
 //Tamanho aleatório do mosquito.
 function randomSize() {
-	var classe = Math.floor(Math.random() * 3);
+	let classe = Math.floor(Math.random() * 3);
 	switch(classe) {
 		case 0:
 			return 'mosquito1';
@@ -81,7 +81,7 @@ function randomSize() {
 
 //Local aleatório onde o mosquito vai aparecer.
 function randomSide() {
-	var classe = Math.floor(Math.random() * 2)
+	let classe = Math.floor(Math.random() * 2)
 	switch(classe) {
 		case 0:
 			return 'ladoA';

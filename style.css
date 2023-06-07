@@ -5,7 +5,9 @@ html {
 body {
 	background-image: url(img/bg.jpg);
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
 }
 
 .mosquito1 {
@@ -50,4 +52,11 @@ body {
 	float: left;
 	font-size: 20px;
 	font-weight: bold;
+}
+
+@media (max-width:600px){
+	img.photo-game {
+		margin-top: 20vh;
+		width: 300px;
+	}
 }

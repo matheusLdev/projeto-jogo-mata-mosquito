@@ -1,3 +1,3 @@
 document.getElementById('timer').innerHTML = timer;
 
-var createMosquito = setInterval(function(){randomPosition()}, createMosquitoTimer);
+let createMosquito = setInterval(function(){randomPosition()}, createMosquitoTimer);
